@@ -1,0 +1,44 @@
+/* section arrows */
+
+.arrows {
+    margin-bottom: 14.35vh;
+
+    background: url('../images/arrows_bg.jpg') 0 0 / cover no-repeat;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__logo {
+        margin-top: 30vh;
+        margin-bottom: 5.56vh;
+
+        svg {
+            max-width: 210px;
+            max-height: 67px;
+        }
+    }
+
+    &__desc {
+        margin-bottom: 28.25vh;
+
+        text-align: center;
+
+        color: $basic-white;
+        background-color: $basic-blue;
+    }
+}
+
+@media (max-width: 768px) {
+    .arrows {
+        &__logo {
+            margin-top: 150px;
+        }
+
+        &__desc {
+            margin-bottom: 150px;
+        }
+    }
+}

@@ -1,0 +1,166 @@
+@import './system/nullstyle';
+
+@import './system/vars';
+
+@import './system/fonts';
+
+@import './sections/header';
+
+@import './sections/main';
+
+@import './sections/advantage';
+
+@import './sections/arrow';
+
+@import './sections/action';
+
+@import './sections/technology';
+
+@import './sections/case';
+
+@import './sections/cost';
+
+@import './sections/team';
+
+@import './sections/service';
+
+@import './sections/footer';
+
+@function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
+    $k: ($f-max - $f-min)/($v-max - $v-min);
+    $b: $f-min - $k * $v-min;
+    $b: $b * 1px;
+
+    @return calc(#{$k} * 100vw + #{$b});
+}
+
+body {
+    font-family: 'Gilroy', sans-serif;
+    font-size: calcFluidFontSize(10, 16, 1024, 1920);
+
+    color: $basic-black;
+    background-color: $basic-white;
+}
+
+input,
+a {
+    cursor: url('../images/_cursor.png') 1 1, pointer;
+}
+
+h1 {
+    font-size: 4rem; //(64px)
+    font-weight: bold;
+    line-height: 1.12;
+}
+
+h2 {
+    font-size: 2.5rem; //(40px)
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 1.875rem; //(30px)
+    font-weight: bold;
+    line-height: 1.33;
+}
+
+h4 {
+    font-size: 1.5rem; //(24px)
+    font-weight: bold;
+    line-height: 1.33;
+}
+
+h5 {
+    font-size: 1.25rem; //(20px)
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+h6 {
+    font-size: 1.125rem; //(18px)
+    font-weight: bold;
+    line-height: 1.56;
+}
+
+/* main wrapper */
+.wrapper {
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    &_wide {
+        max-width: 1590px;
+    }
+}
+
+/* icons */
+.icon {
+    &_logo {
+        width: 135px;
+        max-height: 43px;
+    }
+
+    &_sys {
+        width: 20px;
+        max-height: 20px;
+        margin-right: 1rem;
+
+        text-align: center;
+    }
+
+    &_cont {
+        width: 40px;
+        max-height: 40px;
+    }
+}
+
+/* calc buttons */
+.calc {
+    font-weight: bold;
+
+    display: inline-block;
+
+    cursor: url('../images/_cursor.png') 1 1, pointer;
+    white-space: nowrap;
+
+    border-radius: 5px;
+
+    &_basic {
+        font-size: .875rem;
+        line-height: 1.71;
+
+        padding: 12px 2.083vw;
+
+        color: $basic-black;
+        border: 2px solid $basic-black;
+    }
+
+    &_blue {
+        font-size: 1rem;
+        line-height: 1.5;
+
+        padding: 12px 4.17vw;
+
+        color: $basic-white;
+        background-color: $basic-blue;
+
+        &:hover {
+            color: $basic-white;
+        }
+    }
+}
+
+/* section title & subtitle (description) */
+.section-title {
+    &__title {
+        margin-bottom: 1.5rem;
+    }
+
+    &__subtitle {
+        font-size: 1.25rem;
+        line-height: 1.6;
+
+        margin-bottom: 2rem;
+    }
+}

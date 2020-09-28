@@ -1,0 +1,50 @@
+.tech {
+    margin-bottom: $after-section;
+
+    background-color: $light-bg;
+
+    &__content {
+        padding: 80px 0;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        flex: 0 1 32.2%;
+        justify-content: center;
+
+        height: 88px;
+
+        border-radius: 10px;
+        background: $basic-white;
+    }
+}
+
+@media (max-width: 768px) {
+    .tech {
+        &__body {
+            display: block;
+        }
+
+        &__item {
+            display: inline-block;
+
+            height: auto;
+            padding: 1rem 2rem;
+
+            &:not(:last-child) {
+                margin-right: 1.5rem;
+            }
+        }
+    }
+}
